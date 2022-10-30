@@ -1,22 +1,13 @@
 function funcionPrincipal(n){
-    function operacionExponencial(n){
-        const exponential = 2**n
-        console.log(exponential)
-        return 2**n    
+    let exponential = 2**(n-1)
+    let acumulado = exponential - 1
+    let suma = exponential + acumulado
+    const lineal = 1000*n
+    const resultado = {
+        ultimoDia: exponential,
+        total: suma,
+        esConveniente: suma>lineal ? 'no conviene':'conviene',
     }
-    function operacionLineal(n){
-        const lineall = 1000*n
-        console.log(lineall)
-        return 1000*n
-    }
-
-    const exponencial = operacionExponencial(n)
-    const lineal = operacionLineal(n)
-
-    if (exponencial>lineal){
-        return 'no conviene'
-        }else{
-        return 'conviene'
-        }
+    return resultado
 }
-console.log(funcionPrincipal(365))
+console.log(funcionPrincipal(4))
