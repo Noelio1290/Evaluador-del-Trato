@@ -1,6 +1,6 @@
-function funcionPrincipal(n){
-    let exponential = 2**(n-1)
-    let acumulado = exponential - 1
+function funcionPrincipal(n,initial){
+    let exponential = initial*(2**(n-1))
+    let acumulado = exponential - initial
     let suma = exponential + acumulado
     const lineal = 1000*n
     const resultado = {
@@ -10,4 +10,4 @@ function funcionPrincipal(n){
     }
     return resultado
 }
-console.log(funcionPrincipal(4))
+console.log(funcionPrincipal(4,4))
